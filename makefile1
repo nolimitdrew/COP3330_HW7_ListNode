@@ -1,0 +1,9 @@
+palindrome_executable: palindrome.o
+	g++ -g -o palindrome palindrome.o
+	chmod 755 palindrome
+
+palindrome.o: palindrome.cpp stack.h list.h listnode.h
+	g++ -g -c palindrome.cpp 
+
+clean:
+	rm -f *.o
